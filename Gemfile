@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+group :development, :test do  
+  gem 'rspec-rails'
+end 
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '2.7.6'

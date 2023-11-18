@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
-
+gem 'factory_bot_rails'
 ruby '2.7.6'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -64,8 +64,10 @@ group :development do
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
 end
+

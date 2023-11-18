@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -9,9 +10,10 @@ require 'rspec/rails'
 
 # Add this line to include shoulda-matchers
 require 'shoulda/matchers'
-# Add this line to include FactoryBot methods
-config.include FactoryBot::Syntax::Methods
-# Requires supporting ruby files with custom matchers and macros, etc, in
+
+# Other FactoryBot configuration, if needed
+
+# Requires supporting ruby files with custom matchers and macros, etc., in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
 # in _spec.rb will both be required and run as specs, causing the specs to be
@@ -33,6 +35,7 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{Rails.root}/spec/fixtures"
@@ -45,11 +48,11 @@ RSpec.configure do |config|
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 
-  # RSpec Rails can automatically mix in different behaviours to your tests
+  # RSpec Rails can automatically mix in different behaviors to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
   #
-  # You can disable this behaviour by removing the line below, and instead
+  # You can disable this behavior by removing the line below and instead
   # explicitly tag your specs with their type, e.g.:
   #
   #     RSpec.describe UsersController, type: :controller do
@@ -67,4 +70,7 @@ RSpec.configure do |config|
 
   # Include the matchers for ActiveRecord
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+  config.include(Shoulda::Matchers::ActiveModel, type: :model)
+  # Include FactoryBot methods
+  config.include FactoryBot::Syntax::Methods
 end

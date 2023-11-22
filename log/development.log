@@ -1259,3 +1259,181 @@ FOREIGN KEY ("author_id")
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("text", "user_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "Hi fahad!"], ["user_id", 2], ["post_id", 1], ["created_at", "2023-11-18 11:32:18.908181"], ["updated_at", "2023-11-18 11:32:18.908181"]]
   [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-11-22 12:35:54 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/faisal/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/faisal/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 468)
+Completed 200 OK in 52ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 6229)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-22 12:36:01 +0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 644.2ms | Allocations: 108752)
+Completed 200 OK in 650ms (Views: 648.5ms | ActiveRecord: 0.0ms | Allocations: 109715)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-22 13:07:49 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 250.1ms | Allocations: 38738)
+Completed 200 OK in 292ms (Views: 263.4ms | ActiveRecord: 0.0ms | Allocations: 44650)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-22 13:07:52 +0500
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2306)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 2659)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-22 14:11:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 272.4ms | Allocations: 37289)
+Completed 200 OK in 311ms (Views: 285.4ms | ActiveRecord: 0.0ms | Allocations: 43200)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-22 14:11:38 +0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 2296)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 2649)
+
+
+Started GET "/show" for 127.0.0.1 at 2023-11-22 14:11:46 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/show"):
+  
+Started GET "/shows" for 127.0.0.1 at 2023-11-22 14:11:51 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/shows"):
+  
+Started GET "/users" for 127.0.0.1 at 2023-11-22 14:12:07 +0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2218)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 2449)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2023-11-22 14:12:13 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2290)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 2570)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2023-11-22 14:12:19 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2215)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 2447)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2023-11-22 14:12:30 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2202)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2427)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-22 14:12:36 +0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 2200)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 2429)
+
+
+Started GET "/users/show" for 127.0.0.1 at 2023-11-22 14:12:42 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2200)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 2424)
+
+
+Started GET "/users/show/posts" for 127.0.0.1 at 2023-11-22 14:14:49 +0500
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/users/show/" for 127.0.0.1 at 2023-11-22 14:36:23 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 259.6ms | Allocations: 37828)
+Completed 200 OK in 302ms (Views: 277.1ms | ActiveRecord: 0.0ms | Allocations: 43739)
+
+
+Started GET "/users/show/posts" for 127.0.0.1 at 2023-11-22 14:36:31 +0500
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/users/show/index" for 127.0.0.1 at 2023-11-22 14:36:54 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/show/index"):
+  
+Started GET "/users/show/" for 127.0.0.1 at 2023-11-22 14:36:59 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2218)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 2449)
+
+
+Started GET "/users/show/posts" for 127.0.0.1 at 2023-11-22 14:37:16 +0500
+  
+ActionController::RoutingError (uninitialized constant PostsController):
+  
+Started GET "/users/show/posts" for 127.0.0.1 at 2023-11-22 14:39:25 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 14449)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 15404)
+
+
+Started GET "/users/show/posts/shows" for 127.0.0.1 at 2023-11-22 14:39:33 +0500
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"show", "id"=>"shows"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2302)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2583)
+
+

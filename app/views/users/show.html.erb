@@ -1,25 +1,35 @@
- <img src="<%= asset_path('im12.jpg') %>" alt="User Photo">
-<div class="specificUser">
-<h1>Name: <%= @user.name %></h1>
-<p><strong> Number of Posts:  <%= @user.posts.count %> </strong></p>
-</div>
-<div class="bio">
-<h2>Bio:</h2>
-<p><%= @user.bio %></p>
+<%= stylesheet_link_tag 'style' %>
+
+<div class="container">
+  <img src ='<%= @user.photo %>' class="userImg" alt="User Photo">
+  <div class="userCon">
+    <h1 class="userName"><%= @user.name %></h1>
+    <p class="Upostcount"><strong>Number of Posts: <%= @user.posts.count %></strong></p>
+  </div>
 </div>
 
+<div class="bio">
+  <h1>Bio:</h1>
+  <p class="bioText"><%= @user.bio %></p>
+</div>
+
+
 <% if @user.recent_posts.any? %>
-  <h2>Recent Posts:</h2>
-  <div class ="recPost">
-  <% @user.posts.each_with_index do |post, index| %>
-    <p><strong>Post#<%= index + 1 %>:</strong> <%= post.title %></p>
-    <p><strong>Post Detail:</strong> <%= post.text %></p>
-    <p><strong>Comments Count:</strong> <%= post.comments_counter %></p>
-    <p><strong>Likes Count:</strong> <%= post.likes_counter %></p>
-    <hr>
-  <% end %>
+  
+    <% @user.recent_posts.each do |post| %>
+    <div class="recPost">
+      <h3><strong>Post: <%= post.title %></strong></h3>
+      <p class="pText"><%= post.text %></p>
+      <div class="comLik">
+        <p><strong>Comments:</strong> <%= post.comments_counter %></p>
+        <p><strong>Likes:</strong> <%= post.likes_counter %></p>
   </div>
+  </div>
+    <% end %>
+  
 <% end %>
-<button>
-<%= link_to 'See all posts', user_posts_path(@user.id) %>
+
+
+<button class="seeAllPostBtn">
+  <%= link_to 'See all posts', user_posts_path(@user.id) %>
 </button>

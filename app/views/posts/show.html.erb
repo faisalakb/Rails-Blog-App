@@ -1,13 +1,16 @@
-<div class="post-container">
+<div class="recPost">
   <h2>Post #<%= @post.id %> by <%= @post.author.name %></h2>
+   <div class="comLik">
+  <p class="postCom">Comments: <%= @post.comments.count %>, Likes: <%= @post.likes.count %></p>
+  </div>
   <div class='userPost'>
     <p><%= @post.text %></p>
   </div>
-  <p class="coli">Comments: <%= @post.comments.count %>, Likes: <%= @post.likes.count %></p>
+  
 </div>
 
 <h2>Comments</h2>
-<div class="comment-list">
+<div class="userCom">
   <% @comments = @post.comments %>
   <% @comments.each do |comment| %>
     <div class="comment-card">

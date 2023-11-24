@@ -1,0 +1,29 @@
+<img src="<%= asset_path('im12.jpg') %>" alt="User Photo">
+<div class="specificUser">
+<h2><%= @user.name %> </h2>
+<p>Number of Posts: <%= @user.posts.count %></p>
+</div>
+
+<% @posts.each_with_index do |post, index| %>
+  <div class="userPost">
+    <h2>Post #<%= index + 1 %></h2>
+    <a class ="postclick" href="<%= user_post_path(@user, post) %>">
+      <p><%= truncate(post.text, length: 50, separator: ' ') %></p>
+    </a>
+    <p>Comments: <%= post.comments.count %>, Likes: <%= post.likes.count %></p>
+  </div>
+  <div class="userCom">
+  <% post.recent_comments.each do |comment| %>
+            <% if comment.user.present? %>
+              <p><%= comment.user.name %>: <%= comment.text %></p>
+            <% else %>
+              <p>Anonymous: <%= comment.text %></p>
+            <% end %>
+          <% end %>
+  
+  </div>
+<% end %>
+
+<button>
+<%= link_to 'Pagination', user_posts_path(@user.id) %>
+</button>

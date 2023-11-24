@@ -1,0 +1,21 @@
+<div class="post-container">
+  <h2>Post #<%= @post.id %> by <%= @post.author.name %></h2>
+  <div class='userPost'>
+    <p><%= @post.text %></p>
+  </div>
+  <p class="coli">Comments: <%= @post.comments.count %>, Likes: <%= @post.likes.count %></p>
+</div>
+
+<h2>Comments</h2>
+<div class="comment-list">
+  <% @comments = @post.comments %>
+  <% @comments.each do |comment| %>
+    <div class="comment-card">
+      <% if comment.user.present? %>
+        <p><strong><%= comment.user.name %>:</strong> <%= comment.text %></p>
+      <% else %>
+        <p><strong>Anonymous:</strong> <%= comment.text %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

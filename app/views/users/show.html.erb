@@ -1,0 +1,25 @@
+ <img src="<%= asset_path('im12.jpg') %>" alt="User Photo">
+<div class="specificUser">
+<h1>Name: <%= @user.name %></h1>
+<p><strong> Number of Posts:  <%= @user.posts.count %> </strong></p>
+</div>
+<div class="bio">
+<h2>Bio:</h2>
+<p><%= @user.bio %></p>
+</div>
+
+<% if @user.recent_posts.any? %>
+  <h2>Recent Posts:</h2>
+  <div class ="recPost">
+  <% @user.posts.each_with_index do |post, index| %>
+    <p><strong>Post#<%= index + 1 %>:</strong> <%= post.title %></p>
+    <p><strong>Post Detail:</strong> <%= post.text %></p>
+    <p><strong>Comments Count:</strong> <%= post.comments_counter %></p>
+    <p><strong>Likes Count:</strong> <%= post.likes_counter %></p>
+    <hr>
+  <% end %>
+  </div>
+<% end %>
+<button>
+<%= link_to 'See all posts', user_posts_path(@user.id) %>
+</button>

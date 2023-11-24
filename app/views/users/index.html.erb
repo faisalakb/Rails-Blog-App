@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag 'style' %>
+
+<div class="container">
+  <% @users.each do |user| %>
+    <a href="<%= user_path(user.id) %>" class="userLink">
+      <img src="<%= asset_path('im12.jpg') %>" alt="User Photo">
+      <div class="userCon">
+        <h2><%= user.name %></h2>
+        <p>Number of posts: <%= user.posts.count %></p>
+      </div>
+    </a>
+  <% end %>
+</div>

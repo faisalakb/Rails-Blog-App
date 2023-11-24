@@ -1,0 +1,157 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.userLink {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.userCon {
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.specificUser {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h1,
+h2 {
+  color: #007bff;
+  margin-top: 20px;
+}
+
+.bio {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.postclick {
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  display: inline-block;
+}
+
+.postclick:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.postclick p {
+  margin: 0;
+  transition: color 0.3s;
+}
+
+strong {
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.recPost,
+.userPost,
+.userCom,
+.post-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.recPost p,
+.userPost p,
+.userCom p {
+  margin-bottom: 10px;
+}
+
+.recPost strong {
+  color: #007bff;
+}
+
+.recPost hr {
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.comment-card p {
+  margin: 0;
+}
+
+.postclick:hover p {
+  color: #fff;
+}
+
+.comment-list {
+  margin-top: 20px;
+}
+
+.comment-list h2 {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.comment-card {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card p strong {
+  color: #333;
+}
+
+.comment-card:nth-child(even) {
+  background-color: #e2e6ea;
+}

@@ -70,3 +70,5 @@ group :test do
   gem 'shoulda-matchers', '~> 4.5', require: false
   gem 'webdrivers'
 end
+
+gem 'devise', '~> 4.9'

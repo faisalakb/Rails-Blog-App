@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :mode_lclears
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create] do
       resources :comments, only: [:index, :new, :create]
-      resources :likes, only: [:create]  # Add this line
+      resources :likes, only: [:create]  
     end
   end
 
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  root to: "main#index"
+  root to: "users#index"
   # Defines the root path route ("/")
   # root "posts#index"
 end

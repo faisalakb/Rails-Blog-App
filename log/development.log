@@ -25293,3 +25293,1262 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 34ms (Views: 20.6ms | ActiveRecord: 3.6ms | Allocations: 8315)
 
 
+Started GET "/" for 127.0.0.1 at 2023-11-30 02:10:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 302.5ms | Allocations: 38886)
+Completed 200 OK in 488ms (Views: 318.7ms | ActiveRecord: 21.9ms | Allocations: 64705)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 02:10:40 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 263.3ms | Allocations: 110628)
+  Rendered layout layouts/application.html.erb (Duration: 275.9ms | Allocations: 112701)
+Completed 200 OK in 287ms (Views: 255.8ms | ActiveRecord: 23.0ms | Allocations: 113717)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 02:13:31 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 11670)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 25999)
+Completed 200 OK in 87ms (Views: 63.8ms | ActiveRecord: 9.9ms | Allocations: 31883)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 02:14:48 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 64.6ms | Allocations: 11624)
+  Rendered layout layouts/application.html.erb (Duration: 142.6ms | Allocations: 25845)
+Completed 200 OK in 177ms (Views: 134.6ms | ActiveRecord: 14.5ms | Allocations: 31718)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 02:15:06 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 70.1ms | Allocations: 2817)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 4879)
+Completed 200 OK in 95ms (Views: 80.0ms | ActiveRecord: 3.1ms | Allocations: 5755)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-11-30 02:21:30 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mPost Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 66.3ms | Allocations: 66639)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 80949)
+Completed 200 OK in 137ms (Views: 86.8ms | ActiveRecord: 11.5ms | Allocations: 98859)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 02:21:35 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (3.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 351.9ms | Allocations: 60457)
+  Rendered layout layouts/application.html.erb (Duration: 364.2ms | Allocations: 62532)
+Completed 200 OK in 379ms (Views: 317.4ms | ActiveRecord: 50.4ms | Allocations: 63893)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 02:23:42 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 165.0ms | Allocations: 40643)
+  Rendered layout layouts/application.html.erb (Duration: 193.6ms | Allocations: 54940)
+Completed 200 OK in 238ms (Views: 172.9ms | ActiveRecord: 32.1ms | Allocations: 70144)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-30 11:59:13 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MainController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 268.1ms | Allocations: 36891)
+Completed 200 OK in 456ms (Views: 286.0ms | ActiveRecord: 31.7ms | Allocations: 62711)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 11:59:21 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 244.4ms | Allocations: 110632)
+  Rendered layout layouts/application.html.erb (Duration: 269.8ms | Allocations: 114612)
+Completed 200 OK in 283ms (Views: 247.0ms | ActiveRecord: 26.3ms | Allocations: 115628)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 12:16:11 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 2808)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 4878)
+Completed 200 OK in 119ms (Views: 53.6ms | ActiveRecord: 27.3ms | Allocations: 8783)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-11-30 12:16:21 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mPost Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 313.5ms | Allocations: 66627)
+  Rendered layout layouts/application.html.erb (Duration: 346.6ms | Allocations: 68714)
+Completed 200 OK in 373ms (Views: 344.4ms | ActiveRecord: 6.2ms | Allocations: 70923)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:17:24 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (5.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 690.9ms | Allocations: 63312)
+  Rendered layout layouts/application.html.erb (Duration: 706.4ms | Allocations: 65398)
+Completed 200 OK in 756ms (Views: 641.2ms | ActiveRecord: 68.8ms | Allocations: 66867)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 12:26:36 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 636.1ms | Allocations: 134575)
+  Rendered layout layouts/application.html.erb (Duration: 757.4ms | Allocations: 150975)
+Completed 200 OK in 958ms (Views: 749.4ms | ActiveRecord: 51.4ms | Allocations: 176808)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-11-30 12:26:42 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mPost Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 266.9ms | Allocations: 66672)
+  Rendered layout layouts/application.html.erb (Duration: 274.2ms | Allocations: 68747)
+Completed 200 OK in 297ms (Views: 273.1ms | ActiveRecord: 5.5ms | Allocations: 70957)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:26:47 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (6.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 672.6ms | Allocations: 60480)
+  Rendered layout layouts/application.html.erb (Duration: 687.6ms | Allocations: 62547)
+Completed 200 OK in 712ms (Views: 634.3ms | ActiveRecord: 57.2ms | Allocations: 63908)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:37:38 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (6.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 380.8ms | Allocations: 40186)
+  Rendered layout layouts/application.html.erb (Duration: 421.8ms | Allocations: 54492)
+Completed 200 OK in 560ms (Views: 387.6ms | ActiveRecord: 60.5ms | Allocations: 72191)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:38:12 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 271.3ms | Allocations: 24403)
+  Rendered layout layouts/application.html.erb (Duration: 283.4ms | Allocations: 26449)
+Completed 200 OK in 303ms (Views: 255.6ms | ActiveRecord: 32.3ms | Allocations: 27787)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:38:15 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 304.1ms | Allocations: 24396)
+  Rendered layout layouts/application.html.erb (Duration: 318.2ms | Allocations: 26450)
+Completed 200 OK in 330ms (Views: 292.1ms | ActiveRecord: 29.1ms | Allocations: 27806)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:38:48 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 1077.5ms | Allocations: 148423)
+  Rendered layout layouts/application.html.erb (Duration: 1230.3ms | Allocations: 164806)
+Completed 200 OK in 1892ms (Views: 1184.7ms | ActiveRecord: 124.1ms | Allocations: 298710)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-11-30 12:44:52 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 507.5ms | Allocations: 132551)
+  Rendered layout layouts/application.html.erb (Duration: 585.7ms | Allocations: 148939)
+Completed 200 OK in 747ms (Views: 575.8ms | ActiveRecord: 44.9ms | Allocations: 174772)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-11-30 12:44:57 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mPost Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 196.4ms | Allocations: 66668)
+  Rendered layout layouts/application.html.erb (Duration: 209.9ms | Allocations: 68751)
+Completed 200 OK in 230ms (Views: 210.0ms | ActiveRecord: 4.3ms | Allocations: 70962)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:45:04 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (6.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 597.1ms | Allocations: 60483)
+  Rendered layout layouts/application.html.erb (Duration: 609.7ms | Allocations: 62576)
+Completed 200 OK in 625ms (Views: 563.8ms | ActiveRecord: 49.7ms | Allocations: 63937)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-11-30 12:47:12 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 421.4ms | Allocations: 132690)
+  Rendered layout layouts/application.html.erb (Duration: 491.4ms | Allocations: 149078)
+Completed 200 OK in 609ms (Views: 483.2ms | ActiveRecord: 36.9ms | Allocations: 174910)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-11-30 12:47:22 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[36mPost Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" WHERE "posts"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 181.2ms | Allocations: 66667)
+  Rendered layout layouts/application.html.erb (Duration: 189.5ms | Allocations: 68740)
+Completed 200 OK in 207ms (Views: 188.1ms | ActiveRecord: 4.6ms | Allocations: 70950)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 12:48:37 +0500
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (6.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 639.2ms | Allocations: 63225)
+  Rendered layout layouts/application.html.erb (Duration: 647.5ms | Allocations: 65314)
+Completed 200 OK in 671ms (Views: 595.8ms | ActiveRecord: 59.1ms | Allocations: 66799)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 13:04:46 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 913.4ms | Allocations: 146596)
+  Rendered layout layouts/application.html.erb (Duration: 1093.8ms | Allocations: 162992)
+Completed 200 OK in 1565ms (Views: 1056.9ms | ActiveRecord: 90.7ms | Allocations: 295531)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-11-30 13:09:00 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `set_current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:32:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:7
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" IN ($1, $2, $3, $4, $5, $6)[0m  [["post_id", 2], ["post_id", 5], ["post_id", 6], ["post_id", 7], ["post_id", 8], ["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:11:in `each_with_index'
+  [1m[36mComment Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 5]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 6]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 7]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 7], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 7], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 8]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 8], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 8], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mComment Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mLike Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 9]]
+  ↳ app/views/posts/index.html.erb:19
+  [1m[36mComment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "comments" WHERE "comments"."post_id" = $1 LIMIT $2[0m  [["post_id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 9], ["LIMIT", 3]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:26
+  Rendered posts/index.html.erb within layouts/application (Duration: 998.7ms | Allocations: 148738)
+  Rendered layout layouts/application.html.erb (Duration: 1097.1ms | Allocations: 165129)
+Completed 200 OK in 1589ms (Views: 1065.3ms | ActiveRecord: 92.3ms | Allocations: 299059)
+
+

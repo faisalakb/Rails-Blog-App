@@ -27704,3 +27704,1869 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 3811)
 
 
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddDeviseToUsers (20231201073208)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to AddDeviseToUsers (20231201073208)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (40.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blog_app_development"[0m
+  [1m[35m (41.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blog_app_test"[0m
+  [1m[35m (141.7ms)[0m  [1m[35mCREATE DATABASE "rails_blog_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (81.3ms)[0m  [1m[35mCREATE DATABASE "rails_blog_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-01 07:46:00.074232', '2023-12-01 07:46:00.074244') RETURNING "key"[0m
+Migrating to CreateUsers (20231115151208)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "photo" character varying, "bio" text, "posts_counter" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231115151208') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20231116151306)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "text" text, "comments_counter" integer, "likes_counter" integer, "author_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_posts_on_author_id" ON "posts" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231116151306') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLikes (20231116192931)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE INDEX "index_likes_on_post_id" ON "likes" ("post_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231116192931') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20231118075731)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "user_id" integer, "post_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231118075731') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeys (20231119123456)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_87a8aac469"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_04d13ef8c7"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231119123456') RETURNING "version"[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20231201073208)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231201073208') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-12-01 12:48:08 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 54ms (ActiveRecord: 0.0ms | Allocations: 5801)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:48:08 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 8.8ms | Allocations: 947)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 3584)
+  Rendered layout layouts/application.html.erb (Duration: 265.9ms | Allocations: 39707)
+Completed 200 OK in 1108ms (Views: 288.7ms | ActiveRecord: 38.3ms | Allocations: 255420)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 12:48:13 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 277)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 2271)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 4377)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.0ms | Allocations: 5209)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 12:48:44 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"faisal", "email"=>"faisalakb786@gmail.com", "bio"=>"Hello from Pakistan", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "photo", "bio", "posts_counter", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "faisal"], ["photo", nil], ["bio", "Hello from Pakistan"], ["posts_counter", 0], ["created_at", "2023-12-01 07:48:45.196949"], ["updated_at", "2023-12-01 07:48:45.196949"], ["email", "faisalakb786@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-12-01 07:48:45.197132"], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Using preview_path= option is deprecated and will be removed in Rails 7.2. Please use preview_paths= instead. (called from block (3 levels) in <class:Railtie> at /home/faisal/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/actionmailer-7.1.2/lib/action_mailer/railtie.rb:62)
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 1.8ms | Allocations: 369)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 17.0ms
+Delivered mail 65698fdd5253e_373941a0905fc@faisal-ThinkPad-T480.mail (16.5ms)
+Date: Fri, 01 Dec 2023 12:48:45 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalakb786@gmail.com
+Message-ID: <65698fdd5253e_373941a0905fc@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=6iNVgCRtJwyW8qNoa6sr">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 303 See Other in 695ms (ActiveRecord: 5.3ms | Allocations: 72372)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 12:48:45 +0500
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:48:45 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1439)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3547)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 4198)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:49:08 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 537ms (ActiveRecord: 1.7ms | Allocations: 3081)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:49:08 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3525)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 4158)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 12:49:12 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 3290)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 3868)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 12:49:45 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"faisal", "email"=>"faisalmumtaz@cuilahore.edu.pk", "bio"=>"djds", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "photo", "bio", "posts_counter", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "faisal"], ["photo", nil], ["bio", "djds"], ["posts_counter", 0], ["created_at", "2023-12-01 07:49:46.044674"], ["updated_at", "2023-12-01 07:49:46.044674"], ["email", "faisalmumtaz@cuilahore.edu.pk"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-12-01 07:49:46.044805"], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 1.3ms | Allocations: 220)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 5.7ms
+Delivered mail 6569901af426_373941f0906d2@faisal-ThinkPad-T480.mail (3.4ms)
+Date: Fri, 01 Dec 2023 12:49:46 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalmumtaz@cuilahore.edu.pk
+Message-ID: <6569901af426_373941f0906d2@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalmumtaz@cuilahore.edu.pk!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=S_v--vdRREuUdvJ6EY14">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 303 See Other in 527ms (ActiveRecord: 6.1ms | Allocations: 9985)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 12:49:46 +0500
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:49:46 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3525)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4182)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 12:49:56 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 3290)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 3874)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 12:49:59 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "bio"=>"", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.9ms | Allocations: 1237)
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3222)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 5318)
+Completed 422 Unprocessable Entity in 52ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 7280)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 12:50:33 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"fsd", "email"=>"faisalakb786@gmail.com", "bio"=>"this is faisal", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 461)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1905)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4001)
+Completed 422 Unprocessable Entity in 527ms (Views: 12.9ms | ActiveRecord: 2.7ms | Allocations: 9712)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 12:51:49 +0500
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:51:49 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 3525)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 4150)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:52:02 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 521ms (ActiveRecord: 1.1ms | Allocations: 1784)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 12:52:03 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3525)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4164)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 13:01:01 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3290)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3859)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 13:01:20 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Mumtaz", "email"=>"faisalmumtaz@cuilahore.edu.pk", "bio"=>"Hello from Lahore, Pakistan", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 403)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3942)
+Completed 422 Unprocessable Entity in 237ms (Views: 5.0ms | ActiveRecord: 1.7ms | Allocations: 9640)
+
+
+Started GET "/users/confirmation/new.user" for 127.0.0.1 at 2023-12-01 13:01:30 +0500
+Processing by Devise::ConfirmationsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 610)
+  Rendered devise/confirmations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3836)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 4347)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2023-12-01 13:01:36 +0500
+Processing by Devise::ConfirmationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."unconfirmed_email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["unconfirmed_email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 1.3ms | Allocations: 224)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 4.2ms
+Delivered mail 656992e088283_373941f09073a@faisal-ThinkPad-T480.mail (1.6ms)
+Date: Fri, 01 Dec 2023 13:01:36 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalakb786@gmail.com
+Message-ID: <656992e088283_373941f09073a@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=6iNVgCRtJwyW8qNoa6sr">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 25ms (ActiveRecord: 1.3ms | Allocations: 7016)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:01:36 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1430)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3528)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4167)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:02:26 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 225ms (ActiveRecord: 0.4ms | Allocations: 1557)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3503)
+Completed 200 OK in 218ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 4017)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:02:39 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 230ms (ActiveRecord: 0.3ms | Allocations: 1556)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3503)
+Completed 200 OK in 212ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 4020)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:04:24 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 227ms (ActiveRecord: 0.3ms | Allocations: 1780)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:04:24 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3525)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 4158)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (5010.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blog_app_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (34.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blog_app_development"[0m
+  [1m[35m (51.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blog_app_test"[0m
+  [1m[35m (61.8ms)[0m  [1m[35mCREATE DATABASE "rails_blog_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (69.9ms)[0m  [1m[35mCREATE DATABASE "rails_blog_app_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-01 08:15:00.879133', '2023-12-01 08:15:00.879144') RETURNING "key"[0m
+Migrating to CreateUsers (20231115151208)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "photo" character varying, "bio" text, "posts_counter" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231115151208') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20231116151306)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "text" text, "comments_counter" integer, "likes_counter" integer, "author_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_posts_on_author_id" ON "posts" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231116151306') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLikes (20231116192931)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "likes" ("id" bigserial primary key, "user_id" integer, "post_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_likes_on_user_id" ON "likes" ("user_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_likes_on_post_id" ON "likes" ("post_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231116192931') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20231118075731)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "text" text, "user_id" integer, "post_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231118075731') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeys (20231119123456)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_87a8aac469"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "likes" ADD CONSTRAINT "fk_rails_1e09b5dabf"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_04d13ef8c7"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231119123456') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20231201073208)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231201073208') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4299283035529105365)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-12-01 13:16:47 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 5807)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:16:47 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 947)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3584)
+  Rendered layout layouts/application.html.erb (Duration: 92.6ms | Allocations: 39570)
+Completed 200 OK in 315ms (Views: 98.5ms | ActiveRecord: 11.9ms | Allocations: 255283)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 13:18:37 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 277)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2271)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4377)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 5203)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 13:19:17 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"faisal", "email"=>"faisalakb786@gmail.com", "bio"=>"Hello from Pakistan", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "photo", "bio", "posts_counter", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "faisal"], ["photo", nil], ["bio", "Hello from Pakistan"], ["posts_counter", 0], ["created_at", "2023-12-01 08:19:17.666231"], ["updated_at", "2023-12-01 08:19:17.666231"], ["email", "faisalakb786@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-12-01 08:19:17.666323"], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Using preview_path= option is deprecated and will be removed in Rails 7.2. Please use preview_paths= instead. (called from block (3 levels) in <class:Railtie> at /home/faisal/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/actionmailer-7.1.2/lib/action_mailer/railtie.rb:62)
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 0.7ms | Allocations: 369)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 6.8ms
+Delivered mail 65699705b0aad_4a3e41c8704fc@faisal-ThinkPad-T480.mail (7.2ms)
+Date: Fri, 01 Dec 2023 13:19:17 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalakb786@gmail.com
+Message-ID: <65699705b0aad_4a3e41c8704fc@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=sBFTsDU8SpjMNkTXfye8">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 303 See Other in 301ms (ActiveRecord: 3.7ms | Allocations: 71298)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 13:19:17 +0500
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 317)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:19:17 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1439)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3547)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4190)
+
+
+Started GET "/users/confirmation/new.user" for 127.0.0.1 at 2023-12-01 13:20:14 +0500
+Processing by Devise::ConfirmationsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 610)
+  Rendered devise/confirmations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1728)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3834)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4345)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2023-12-01 13:20:46 +0500
+Processing by Devise::ConfirmationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."unconfirmed_email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["unconfirmed_email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 0.5ms | Allocations: 224)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 2.1ms
+Delivered mail 6569975e513cf_4a3e41a0705aa@faisal-ThinkPad-T480.mail (1.2ms)
+Date: Fri, 01 Dec 2023 13:20:46 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalakb786@gmail.com
+Message-ID: <6569975e513cf_4a3e41a0705aa@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=sBFTsDU8SpjMNkTXfye8">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 44ms (ActiveRecord: 0.9ms | Allocations: 9592)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:20:46 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1430)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3528)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4157)
+
+
+Started GET "/users/confirmation/new.user" for 127.0.0.1 at 2023-12-01 13:26:29 +0500
+Processing by Devise::ConfirmationsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 604)
+  Rendered devise/confirmations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1455)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3551)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3867)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2023-12-01 13:26:33 +0500
+Processing by Devise::ConfirmationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."unconfirmed_email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["unconfirmed_email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 0.9ms | Allocations: 220)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 3.4ms
+Delivered mail 656998b9d647e_4a3e41dc706f1@faisal-ThinkPad-T480.mail (1.3ms)
+Date: Fri, 01 Dec 2023 13:26:33 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: faisalakb786@gmail.com
+Message-ID: <656998b9d647e_4a3e41dc706f1@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=sBFTsDU8SpjMNkTXfye8">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 17ms (ActiveRecord: 0.9ms | Allocations: 6914)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:26:33 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3525)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4184)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 13:33:49 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 245)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 745)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 4251)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 41011)
+Completed 200 OK in 386ms (Views: 99.5ms | ActiveRecord: 10.1ms | Allocations: 261537)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 13:34:13 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"faisal", "email"=>"faisalmumtaz@cuilahore.edu.pk", "bio"=>"jdsld", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "photo", "bio", "posts_counter", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "faisal"], ["photo", nil], ["bio", "jdsld"], ["posts_counter", 0], ["created_at", "2023-12-01 08:34:13.918991"], ["updated_at", "2023-12-01 08:34:13.918991"], ["email", "faisalmumtaz@cuilahore.edu.pk"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-12-01 08:34:13.919093"], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Using preview_path= option is deprecated and will be removed in Rails 7.2. Please use preview_paths= instead. (called from block (3 levels) in <class:Railtie> at /home/faisal/.rbenv/versions/2.7.6/lib/ruby/gems/2.7.0/gems/actionmailer-7.1.2/lib/action_mailer/railtie.rb:62)
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 0.9ms | Allocations: 369)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 7.2ms
+Delivered mail 65699a863ce2_547641f083096@faisal-ThinkPad-T480.mail (32.1ms)
+Date: Fri, 01 Dec 2023 13:34:14 +0500
+From: faisalakb786@gmail.com
+Reply-To: faisalakb786@gmail.com
+To: faisalmumtaz@cuilahore.edu.pk
+Message-ID: <65699a863ce2_547641f083096@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalmumtaz@cuilahore.edu.pk!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=eGByBz8jhFzzGdutzayQ">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 303 See Other in 378ms (ActiveRecord: 4.0ms | Allocations: 105352)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 13:34:14 +0500
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:34:14 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 475)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2203)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4311)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 5191)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for 127.0.0.1 at 2023-12-01 13:34:33 +0500
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "confirmed_at" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-12-01 08:34:33.220913"], ["confirmed_at", "2023-12-01 08:34:33.220402"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 19ms (ActiveRecord: 4.1ms | Allocations: 5618)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:34:33 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3525)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 4155)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:35:10 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalmumtaz@cuilahore.edu.pk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalmumtaz@cuilahore.edu.pk"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 232ms (ActiveRecord: 0.3ms | Allocations: 2510)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 13:35:11 +0500
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 35.7ms | Allocations: 15036)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 16942)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 3.7ms | Allocations: 19052)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-12-01 13:35:46 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 18ms (ActiveRecord: 0.3ms | Allocations: 3926)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:35:46 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1439)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3546)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4192)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 13:35:53 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3290)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 3872)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:36:01 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 231ms (ActiveRecord: 0.4ms | Allocations: 1556)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3505)
+Completed 200 OK in 221ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 4021)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 13:36:08 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3290)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 3874)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-12-01 13:36:37 +0500
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"faisal", "email"=>"faisalakb786@gmail.com", "bio"=>"hello", "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 489)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1934)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4030)
+Completed 422 Unprocessable Entity in 234ms (Views: 7.0ms | ActiveRecord: 1.7ms | Allocations: 8695)
+
+
+Started GET "/users/confirmation/new.user" for 127.0.0.1 at 2023-12-01 13:36:45 +0500
+Processing by Devise::ConfirmationsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 610)
+  Rendered devise/confirmations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1724)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3830)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 4278)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2023-12-01 13:36:49 +0500
+Processing by Devise::ConfirmationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com"}, "commit"=>"Resend confirmation instructions"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."unconfirmed_email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["unconfirmed_email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 0.7ms | Allocations: 224)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 24.6ms
+Delivered mail 65699b228318_547642188312a@faisal-ThinkPad-T480.mail (14.9ms)
+Date: Fri, 01 Dec 2023 13:36:50 +0500
+From: faisalakb786@gmail.com
+Reply-To: faisalakb786@gmail.com
+To: faisalakb786@gmail.com
+Message-ID: <65699b228318_547642188312a@faisal-ThinkPad-T480.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome faisalakb786@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=sBFTsDU8SpjMNkTXfye8">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 55ms (ActiveRecord: 0.7ms | Allocations: 11074)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:36:50 +0500
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1430)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3546)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 4194)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for 127.0.0.1 at 2023-12-01 13:36:52 +0500
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (5.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "confirmed_at" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-12-01 08:36:52.633616"], ["confirmed_at", "2023-12-01 08:36:52.632682"], ["id", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 20ms (ActiveRecord: 6.9ms | Allocations: 4645)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:36:52 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3525)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4144)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:36:59 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 230ms (ActiveRecord: 0.4ms | Allocations: 1541)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3503)
+Completed 200 OK in 227ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 4016)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:37:11 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 226ms (ActiveRecord: 0.3ms | Allocations: 1543)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3503)
+Completed 200 OK in 218ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 4017)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 13:37:18 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"faisalakb786@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "faisalakb786@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 234ms (ActiveRecord: 0.3ms | Allocations: 2371)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 13:37:18 +0500
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2849)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4754)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 1.2ms | Allocations: 6316)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:36:36 +0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 56ms (ActiveRecord: 19.5ms | Allocations: 4573)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 14:36:36 +0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/index.html.erb:9
+  [1m[36mPost Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered users/index.html.erb within layouts/application (Duration: 171.0ms | Allocations: 14340)
+  Rendered layout layouts/application.html.erb (Duration: 187.4ms | Allocations: 19566)
+Completed 200 OK in 203ms (Views: 187.6ms | ActiveRecord: 2.5ms | Allocations: 21129)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-12-01 14:36:48 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1670)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:36:48 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3524)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 4159)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 14:36:57 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 3290)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 3873)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:44:06 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 9989)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.0ms | Allocations: 10598)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:44:24 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 3564)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 4181)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:44:26 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3523)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 4130)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:45:26 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 8433)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 0.0ms | Allocations: 9042)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:45:33 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 8422)
+Completed 200 OK in 76ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 9035)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:45:54 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 8436)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 9049)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:45:56 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3523)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 4136)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:46:21 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 8.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 58.5ms | Allocations: 8962)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.0ms | Allocations: 9579)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:46:23 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.6ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 3523)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 4134)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:46:35 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 8964)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 0.0ms | Allocations: 9579)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:47:00 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 8480)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 0.0ms | Allocations: 9087)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 14:47:28 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.4ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | Allocations: 9502)
+Completed 200 OK in 74ms (Views: 70.1ms | ActiveRecord: 0.0ms | Allocations: 10115)
+
+
+Started GET "/" for 127.0.0.1 at 2023-12-01 17:41:24 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 3799)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:41:24 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 947)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3589)
+  Rendered layout layouts/application.html.erb (Duration: 119.3ms | Allocations: 60139)
+Completed 200 OK in 367ms (Views: 130.0ms | ActiveRecord: 19.2ms | Allocations: 277731)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:42:15 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1438)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8438)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 9082)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:42:32 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8481)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 9096)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:43:13 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 9497)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 10116)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:43:30 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8967)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 9588)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:43:42 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 7955)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 8577)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:52:57 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 942)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4192)
+  Rendered layout layouts/application.html.erb (Duration: 99.2ms | Allocations: 60847)
+Completed 200 OK in 326ms (Views: 106.4ms | ActiveRecord: 9.2ms | Allocations: 281442)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:53:34 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1438)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8500)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 9131)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:53:38 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3523)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4138)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 17:53:40 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 279)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2273)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4379)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 5220)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 17:53:42 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 265)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3295)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 3876)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:54:05 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3523)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 4147)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 17:54:10 +0500
+Processing by Devise::RegistrationsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 269)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 6389)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 6873)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:54:57 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 10046)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 10659)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:55:28 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 9544)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 10180)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 17:56:59 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 8492)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 9101)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:01:12 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2041)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2120)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.7ms | Allocations: 12138)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= class :mylabel f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+4:      <div class="field">
+5:        <%= class :mylabel f.label :email %><br />
+6:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+7:      </div>
+8:    
+9:      <div class="field">
+10:        <%= f.label :password %><br />
+11:        <%= f.password_field :password, autocomplete: "current-password" %>
+12:      </div>
+13:    
+14:      <% if devise_mapping.rememberable? %>
+15:        <div class="field">
+16:          <%= f.check_box :remember_me %>
+17:          <%= f.label :remember_me %>
+18:        </div>
+19:      <% end %>
+20:    
+21:      <div class="actions">
+22:        <%= f.submit "Log in" %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:5: syntax error, unexpected local variable or method, expecting '.' or &. or :: or '['
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:03:30 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 942)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4202)
+  Rendered layout layouts/application.html.erb (Duration: 128.2ms | Allocations: 61330)
+Completed 200 OK in 434ms (Views: 138.2ms | ActiveRecord: 10.8ms | Allocations: 281903)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:03:51 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 8997)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 9620)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:04:29 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 8985)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 9615)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:04:39 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 8448)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 9072)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:04:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3529)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4153)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:05:01 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 8461)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 9082)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:05:15 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 9516)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 10135)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:05:30 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 9574)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 10193)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:05:49 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 10626)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 11241)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:06:04 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 9002)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 9613)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:06:29 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 8987)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 9611)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:06:50 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 10012)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 10635)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:07:54 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 925)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 21575)
+Completed 200 OK in 43ms (Views: 29.8ms | ActiveRecord: 2.6ms | Allocations: 29241)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:07:58 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1442)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3538)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4156)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:08:04 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 8976)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 9591)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:08:12 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 8461)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 9080)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:08:27 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 925)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 17349)
+Completed 200 OK in 35ms (Views: 22.2ms | ActiveRecord: 2.9ms | Allocations: 24966)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:08:51 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1442)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3538)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 4176)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-12-01 18:09:01 +0500
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:09:01 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3530)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4184)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:10:24 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1432)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10064)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 10677)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:11:32 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 925)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2340)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 23590)
+Completed 200 OK in 45ms (Views: 31.5ms | ActiveRecord: 3.4ms | Allocations: 31198)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:11:48 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 461)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1447)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 8001)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 8609)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:12:03 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 8521)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 9138)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:12:25 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8479)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 9090)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:12:34 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 10109)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 10724)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:13:26 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 8006)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 8609)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:13:29 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 445)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3516)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4002)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:13:54 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3574)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4181)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:16:38 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 279)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2275)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4381)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 5207)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:18:04 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 729)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2503)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 16871)
+Completed 200 OK in 45ms (Views: 23.9ms | ActiveRecord: 4.0ms | Allocations: 26771)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:18:25 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 729)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2498)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 16827)
+Completed 200 OK in 38ms (Views: 22.8ms | ActiveRecord: 4.7ms | Allocations: 24416)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:19:34 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 729)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2504)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 21764)
+Completed 200 OK in 43ms (Views: 28.6ms | ActiveRecord: 2.9ms | Allocations: 29329)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:19:59 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 269)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 9307)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 9893)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:21:44 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 729)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2506)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 21220)
+Completed 200 OK in 42ms (Views: 30.1ms | ActiveRecord: 2.4ms | Allocations: 28771)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:22:14 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 729)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2513)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 16894)
+Completed 200 OK in 41ms (Views: 25.1ms | ActiveRecord: 3.4ms | Allocations: 24480)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:22:48 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 942)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 4211)
+  Rendered layout layouts/application.html.erb (Duration: 119.8ms | Allocations: 56500)
+Completed 200 OK in 410ms (Views: 129.3ms | ActiveRecord: 10.3ms | Allocations: 277087)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-12-01 18:22:56 +0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 244)
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 279)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2293)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4399)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 5220)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-12-01 18:23:01 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 356)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 18:23:01 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 458)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1441)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3539)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 4183)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2023-12-01 18:23:04 +0500
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 464)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1392)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3498)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4285)
+
+

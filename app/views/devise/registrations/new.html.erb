@@ -1,10 +1,10 @@
-<h2>Sign up</h2>
+<h2 class='logTitle' >Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-      <%= f.text_field :name, autofocus: true,  placeholder: "name",autocomplete: "name" %>
+      <%= f.text_field :name, autofocus: true,  placeholder: "name",autocomplete: "name", class: :signUpName %>
   </div>
 
   <div class="field">
@@ -28,11 +28,11 @@
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation,  placeholder: "confirm password",autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation,  placeholder: "confirm password",autocomplete: "new-password", class: :cp %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: :loginbtn %>
   </div>
 <% end %>
 <p class='reg'> Already have an account? </p>

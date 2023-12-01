@@ -29570,3 +29570,14 @@ Processing by Devise::PasswordsController#new as HTML
 Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4285)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-12-01 19:14:57 +0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 942)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 4211)
+  Rendered layout layouts/application.html.erb (Duration: 103.6ms | Allocations: 61913)
+Completed 200 OK in 338ms (Views: 111.7ms | ActiveRecord: 9.3ms | Allocations: 295141)
+
+

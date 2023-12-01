@@ -13,20 +13,17 @@
   <p class="bioText"><%= @user.bio %></p>
 </div>
 
-
 <% if @user.recent_posts.any? %>
-  
-    <% @user.recent_posts.each do |post| %>
+  <% @user.recent_posts.each do |post| %>
     <div class="recPost">
       <h3><strong>Post: <%= post.title %></strong></h3>
       <p class="pText"><%= post.text %></p>
       <div class="comLik">
         <p><strong>Comments:</strong> <%= post.comments_counter %></p>
         <p><strong>Likes:</strong> <%= post.likes_counter %></p>
-  </div>
-  </div>
-    <% end %>
-  
+      </div>
+    </div>
+  <% end %>
 <% end %>
 
 <%= link_to "Add New Post", new_user_post_path(@user), class: "newPostBtn" %>

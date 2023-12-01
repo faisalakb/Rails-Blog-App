@@ -32,4 +32,11 @@
       <% end %>
     </div>
   <% end %>
+
+  <% if can? :destroy, @post %>
+    <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+  <% else %>
+    <p>You are not authorized to delete this post.</p>
+  <% end %>
+
 </div>

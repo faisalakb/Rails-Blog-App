@@ -9,6 +9,17 @@
   
 </div>
 
+<div>
+
+<%= form_for(@post.likes.new, url: user_post_likes_path(@post.author, @post)) do |f| %>
+            <%= f.hidden_field :author_id, value: @current_user %>
+            <%= f.submit "Like Post", class: "seeAllPostBtn" %>
+          <% end %>
+
+<%= link_to "Add Comment", new_user_post_comment_path(@user, @post), class: "commentBtn" %>
+
+</div>
+
 <h2>Comments</h2>
 <div class="userCom">
   <% @comments = @post.comments %>

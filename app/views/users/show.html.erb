@@ -29,6 +29,7 @@
   
 <% end %>
 
+<%= link_to "Add New Post", new_user_post_path(@user), class: "newPostBtn" %>
 
 <button class="seeAllPostBtn">
   <%= link_to 'See all posts', user_posts_path(@user.id) %>

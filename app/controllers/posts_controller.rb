@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user)
   end
 
@@ -39,13 +38,11 @@ class PostsController < ApplicationController
 
   def set_user
     @user = User.find_by(id: params[:user_id])
-  
-    if @user.nil?
-      redirect_to root_path, alert: 'User not found.'
-    end
+
+    return unless @user.nil?
+
+    render file: "#{Rails.root}/public/404.html", layout: false, status: :not_found
   end
-  
-  private
 
   def set_post
     @post = Post.find(params[:id])

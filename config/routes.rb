@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:index, :new, :create]
-      resources :likes, only: [:create]  # Add this line
+      resources :comments, only: [:index, :new, :create, :destroy]
+      resources :likes, only: [:create]
+      member do
+        delete :destroy
+      end
+    end
+  end
+
+  # Remove the redundant resources :posts block
+  resources :comments do
+    member do
+      delete :destroy
     end
   end
 
@@ -12,6 +23,4 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root to: "users#index"
-  # Defines the root path route ("/")
-  # root "posts#index"
 end
